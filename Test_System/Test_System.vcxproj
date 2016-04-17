@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\Log.h" />
+    <ClInclude Include="lib\Library.hpp" />
+    <ClInclude Include="System_Library.hpp" />
+    <ClInclude Include="test.h" />
+    <ClInclude Include="test2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="소스.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EB2950A2-3CEE-449C-9840-536792CEAEFA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,8 +156,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
