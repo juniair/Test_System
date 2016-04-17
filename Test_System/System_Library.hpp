@@ -12,7 +12,10 @@ namespace System {
 	};
 
 	class Log {
-
+	private:
+		static void makeLogFile(std::string log);
+	public:
+		static void print(TAG, MESSAGE);
 	};
 	
 	class Socket {	
@@ -25,20 +28,16 @@ namespace System {
 		SOCKET_SIZE clinetAddressSize;
 		SOCKADDR_IN serverAddress, clientAddress;
 
-		void init() {};
+		void initialize();
 	public:
-		Socket(DOMAIN = PF_INET, SOCKET_TYPE = TCP, PROTOCOL = 0) {};
+		Socket(DOMAIN = PF_INET, SOCKET_TYPE = TCP, PROTOCOL = 0);
 		
-		void connect(IP = INADDR_ANY, PORT = 9999, PROTOCOL = AF_INET) {};
+		void connect(IP = INADDR_ANY, PORT = 9999, PROTOCOL = AF_INET);
 		
 
 		~Socket() {};
 		
 		
 	};
-
-	
-
-	
 }
 #endif

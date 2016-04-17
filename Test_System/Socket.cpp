@@ -4,9 +4,19 @@ namespace System {
 	Socket::Socket(DOMAIN domain, SOCKET_TYPE type, PROTOCOL protocol)
 	{
 #ifdef WINDOWS
-		if (WSAStartup(MAKEWORD(2, 2), &this->wsaData))
-		{
-
+		switch (WSAStartup(MAKEWORD(2, 2), &this->wsaData)) {
+			case WSASYSNOTREADY:
+				break;
+			case WSAVERNOTSUPPORTED:
+				break;
+			case WSAEINPROGRESS:
+				break;
+			case WSAEPROCLIM:
+				break;
+			case WSAEFAULT:
+				break;
+			default:
+				break;
 		}
 #endif // WINDOWS
 		

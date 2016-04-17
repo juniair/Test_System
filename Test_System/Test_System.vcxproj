@@ -25,6 +25,7 @@
     <ClInclude Include="test2.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="Socket.cpp" />
     <ClCompile Include="소스.cpp" />
   </ItemGroup>
