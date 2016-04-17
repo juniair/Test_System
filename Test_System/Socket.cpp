@@ -31,8 +31,8 @@ namespace System {
 			WSACleanup();
 			
 #else
-			close(client);
-			close(server);
+			close(this->client);
+			close(this->server);
 #endif
 		}
 	}

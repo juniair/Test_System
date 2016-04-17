@@ -8,7 +8,7 @@
 
 #ifdef WINDOWS
 	#include <winsock2.h>
-	//#pragma comment(lib, "ws2_32.lib")
+	#pragma comment(lib, "ws2_32.lib")
 	typedef int SOCKET_SIZE;
 #else
 	#include <unistd.h>
