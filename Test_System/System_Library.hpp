@@ -1,9 +1,8 @@
+#pragma once
+
 #ifndef _SYSTEM_LIBRARY_HPP_
 #define _SYSTEM_LIBRARY_HPP_
 #include "lib/Library.hpp"
-
-
-
 
 namespace System {
 	
@@ -11,11 +10,11 @@ namespace System {
 
 	};
 
-	class Log {
+	static class Log {
 	private:
-		static void makeLogFile(std::string log);
+		void makeLogFile(std::string log);
 	public:
-		static void print(TAG, MESSAGE);
+		void print(TAG, MESSAGE);
 	};
 	
 	class Socket {	
@@ -35,9 +34,9 @@ namespace System {
 		void connect(IP = INADDR_ANY, PORT = 9999, PROTOCOL = AF_INET);
 		
 
-		~Socket() {};
+		~Socket();
 		
 		
 	};
-}
+} // namespce System
 #endif
