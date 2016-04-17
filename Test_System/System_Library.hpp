@@ -1,6 +1,6 @@
 #ifndef _SYSTEM_LIBRARY_HPP_
 #define _SYSTEM_LIBRARY_HPP_
-#include "lib/Library.hpp"
+#include "lib/Library.h"
 
 
 
@@ -17,29 +17,21 @@ namespace System {
 
 	class Socket {	
 	private:
-#ifdef WINDOWS
+#define WIDNOWS
 		WSADATA wsaData;
-#endif // WINDOWS
+#endif
 		SOCKET server, client;
 		SOCKET_SIZE clinetAddressSize;
 		SOCKADDR_IN serverAddress, clientAddress;
 
-		void init();
+		void init() {};
 	public:
-		Socket(DOMAIN = PF_INET, SOCKET_TYPE = TCP, PROTOCOL = 0);
+		Socket(DOMAIN = PF_INET, SOCKET_TYPE = TCP, PROTOCOL = 0) {};
 		
-		void connect(IP = INADDR_ANY, PORT = 9999, PROTOCOL = AF_INET);
+		void connect(IP = INADDR_ANY, PORT = 9999, PROTOCOL = AF_INET) {};
 		
 
-		~Socket()
-		{
-	#ifdef WINDOWS
-			WSACleanup();
-	#else
-			close(client);
-			close(server);
-	#endif
-		}
+		~Socket() {};
 		
 		
 	};
