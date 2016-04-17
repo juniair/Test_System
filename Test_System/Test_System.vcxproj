@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib\Library.h" />
+    <ClInclude Include="lib\Library.hpp" />
     <ClInclude Include="System_Library.hpp" />
     <ClInclude Include="test.h" />
     <ClInclude Include="test2.h" />

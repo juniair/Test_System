@@ -1,6 +1,6 @@
 #ifndef _SYSTEM_LIBRARY_HPP_
 #define _SYSTEM_LIBRARY_HPP_
-#include "lib/Library.h"
+#include "lib/Library.hpp"
 
 
 
@@ -14,12 +14,13 @@ namespace System {
 	class Log {
 
 	};
-
+	
 	class Socket {	
 	private:
-#define WIDNOWS
+#ifdef WINDOWS
 		WSADATA wsaData;
 #endif
+		
 		SOCKET server, client;
 		SOCKET_SIZE clinetAddressSize;
 		SOCKADDR_IN serverAddress, clientAddress;

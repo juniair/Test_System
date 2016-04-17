@@ -30,7 +30,7 @@
     <ClInclude Include="System_Library.hpp">
       <Filter>헤더 파일\lib</Filter>
     </ClInclude>
-    <ClInclude Include="lib\Library.h">
+    <ClInclude Include="lib\Library.hpp">
       <Filter>헤더 파일\lib</Filter>
     </ClInclude>
   </ItemGroup>
