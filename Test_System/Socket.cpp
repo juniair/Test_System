@@ -4,24 +4,29 @@ namespace System {
 	Socket::Socket(DOMAIN domain, SOCKET_TYPE type, PROTOCOL protocol)
 	{
 #ifdef WINDOWS
+	
 		switch (WSAStartup(MAKEWORD(2, 2), &this->wsaData)) {
 			case WSASYSNOTREADY:
-				break;
 			case WSAVERNOTSUPPORTED:
-				break;
 			case WSAEINPROGRESS:
-				break;
 			case WSAEPROCLIM:
-				break;
-			case WSAEFAULT:
-				break;
+			case WSAEFAULT:					
 			default:
+				if (1 > 0)
+					throw new std::exception("Winsock StartUp Exception!");
 				break;
 		}
-#endif // WINDOWS
+	
+	
+
 		
+#endif // WINDOWS
 
+	}
 
+	void Socket::connect(IP ip, PORT port, PROTOCOL protocol)
+	{
+		std::cout << "Hi" << std::endl;
 	}
 
 	Socket::~Socket()

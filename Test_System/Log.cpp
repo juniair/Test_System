@@ -1,13 +1,28 @@
-#pragma once
-#ifndef _LOG_CLASS_
-#define _LOG_CLASS_
-#include "lib/System_Library.hpp"
-
+#include "System_Library.hpp"
 namespace System {
-	void Log::Log
+
+	void Log::makeLogFile(std::string logInfo) noexcept
 	{
-		std::cout << tag << " " << message << std::endl;
+		std::fstream file;
+		file.open("Log.txt", std::ios::app);
+		file << logInfo.c_str() << std::endl;
+		file.close();
+		
+	}
+
+	void Log::print(TAG tag, MESSAGE message)  noexcept
+	{
+		std::string logInfo;
+#ifdef WINDOWS
+		logInfo = __TIMESTAMP__ + std::string(" ") + tag + std::string(" : ") + message;
+		
+#else
+		time_t now = time(NULL);
+		logInfo = std::string(ctime(&now)) + std::string(" ") + tag + std::string(" : ") + message;
+#endif
+		
+		std::cout << logInfo.c_str() << std::endl;
+		
 	}
 }
 
-#endif // !_LOG_CLASS_

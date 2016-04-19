@@ -27,6 +27,7 @@
   <ItemGroup>
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketException.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="SYSYEM_SEVER.cpp" />
   </ItemGroup>

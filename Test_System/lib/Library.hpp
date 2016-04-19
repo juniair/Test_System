@@ -26,12 +26,13 @@
 	#include <stdlib.h>
 	#include <string.h>
 	#include <stdio.h>
-
+	#include <time.h>
 
 	// ISO C++11 standard library
 	#include <iostream>
 	#include <fstream>
-	#include <chrono>
+	#include <ctime>
+	#include <exception>
 	
 	typedef int SOCKET_TYPE;
 	typedef unsigned int PORT;
