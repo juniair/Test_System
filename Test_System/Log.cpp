@@ -24,5 +24,19 @@ namespace System {
 		std::cout << logInfo.c_str() << std::endl;
 		
 	}
+
+	void Log::print(MESSAGE message) noexcept
+	{
+		std::stringstream logInfo;
+#ifdef WINDOWS
+		logInfo << __TIMESTAMP__ << std::string(message);
+
+#else
+		time_t now = time(NULL);
+		logInfo = std::string(ctime(&now)) + std::string(" ") + message;
+#endif
+
+		std::cout << logInfo.str() << std::endl;
+	}
 }
 

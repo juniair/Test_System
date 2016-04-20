@@ -21,33 +21,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="test2.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="System_Library.hpp">
-      <Filter>헤더 파일\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="lib\Library.hpp">
       <Filter>헤더 파일\lib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
     <ClCompile Include="SYSYEM_SEVER.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Log.cpp">
       <Filter>헤더 파일\src</Filter>
     </ClCompile>
+    <ClCompile Include="SocketException.cpp">
+      <Filter>헤더 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Adderss.cpp">
+      <Filter>헤더 파일\src</Filter>
+    </ClCompile>
     <ClCompile Include="Socket.cpp">
       <Filter>헤더 파일\src</Filter>
     </ClCompile>
-    <ClCompile Include="SocketException.cpp">
+    <ClCompile Include="TCP.cpp">
       <Filter>헤더 파일\src</Filter>
     </ClCompile>
   </ItemGroup>

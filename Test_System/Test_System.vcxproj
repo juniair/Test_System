@@ -19,17 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib\Library.hpp" />
     <ClInclude Include="System_Library.hpp" />
-    <ClInclude Include="test.h" />
-    <ClInclude Include="test2.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Adderss.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Socket.cpp" />
     <ClCompile Include="SocketException.cpp" />
-    <ClCompile Include="test.cpp" />
     <ClCompile Include="SYSYEM_SEVER.cpp" />
+    <ClCompile Include="TCP.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EB2950A2-3CEE-449C-9840-536792CEAEFA}</ProjectGuid>
