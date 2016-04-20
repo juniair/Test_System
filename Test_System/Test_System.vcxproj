@@ -27,7 +27,8 @@
   <ItemGroup>
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Socket.cpp" />
-    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="SYSYEM_SEVER.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EB2950A2-3CEE-449C-9840-536792CEAEFA}</ProjectGuid>
@@ -114,11 +115,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
