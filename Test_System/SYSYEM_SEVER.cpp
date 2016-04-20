@@ -1,6 +1,6 @@
-#include "lib\System_Library.hpp"
+#include <iostream>
 
 int main()
 {
-	System::Log::print("Hello", "World");
+	std::cout << __TIMESTAMP__ << "Hi";
 }
